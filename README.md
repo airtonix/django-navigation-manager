@@ -33,21 +33,49 @@ Somewhere in your application, insert code similar to the following :
     navigation_manager = NavigationManager()
     navigation_manager.add_to_bar("main",[
         {    "label" : "Projects",
-            "urlconf" : "project.projects.urls",
-            "viewname" : "project-dashboard",
-            "args" : None,
+             "urlconf" : "project.projects.urls",
+             "viewname" : "project-dashboard",
+             "args" : None,
         },
         {    "label" : "Issues",
-            "urlconf" : "project.projects.urls",
-            "viewname" : "project-issue-list",
-            "args" : None,
+             "urlconf" : "project.projects.urls",
+             "viewname" : "project-issue-list",
+             "args" : None,
+        },
+    ])
+
+    navigation_manager.add_to_bar("projects",[
+        {    "label" : "Add Project",
+             "urlconf" : "project.projects.urls",
+             "viewname" : "project-project-add",
+             "args" : None,
+             "permissions" : ('project.can_add_project'),  #optional
+        }
+        {    "label" : "Add Issue",
+             "urlconf" : "project.projects.urls",
+             "viewname" : "project-issue-add",
+             "args" : None,
+             "permissions" : ('project.can_add_issue'),    #optional
         }
     ])
 
 Where the above relates to a project tree of :
 
     project/
-      /projects/
+      projects/
+        templatetags/
+        templates/
+          forms/
+            project_project_add.html
+            project_project_edit.html
+            project_issue_add.html
+            project_issue_edit.html
+          project_dashboard.html
+          project_project_detail.html
+          project_project_list.html
+          project_issue_detail.html
+          project_issue_list.html
+          project_dashboard.html
         __init__.py
         models.py
         views.py

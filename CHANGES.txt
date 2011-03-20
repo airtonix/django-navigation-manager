@@ -1,0 +1,10 @@
+v0.0.1dev, Sun Feb  6 06:56:57 CST 2011 -- Initial release.
+v0.0.2dev, Sun Feb  6 06:56:57 CST 2011 -- Something
+v0.0.3dev, Sun Feb  6 06:56:57 CST 2011 -- Something
+v0.0.4dev, Wed Mar 16 08:25:00 CST 2011 -- Fixed improper and missing auto_render import
+v0.0.5dev, Sat Mar 19 08:25:00 CST 2011 -- attempt to solve relative import problem
+v0.0.6dev, Sun Mar 20 11:25:00 CST 2011 -- attempt to solve relative import proble with absolute imports
+v0.0.7dev, Sun Mar 20 11:35:00 CST 2011 -- removed improper import statement
+v0.0.8dev, Sun Mar 20 11:55:00 CST 2011 -- Insert some debugging template tags
+v0.0.9dev, Sun Mar 20 03.40:00 CST 2011 -- remove debugging templatetags, Changed the navigation template tag to handle the template rendering, included permission checking (see README).
+
